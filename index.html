@@ -5,13 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pengumuman Kelulusan SKB Kota Metro</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-gray-100 min-h-screen flex flex-col items-center justify-center p-4">
   <div class="bg-white p-6 rounded-2xl shadow-lg w-full max-w-xl">
     <h1 class="text-2xl font-bold text-center text-blue-700 mb-4">Pengumuman Kelulusan</h1>
-    <h2 class="text-lg text-center text-gray-700 mb-6">SKB KOTA METRO Kelas Tahun 2024/2025</h2>
+    <h2 class="text-lg text-center text-gray-700 mb-6">SKB KOTA METRO Tahun 2024/2025</h2>
 
-    <label class="block text-sm font-medium text-gray-700 mb-2" for="search">Masukkan Nama, NISN, atau Tanggal Lahir (DD/MM/YYYY)</label>
+    <label class="block text-sm font-medium text-gray-700 mb-2" for="search">
+      Masukkan Nama, NISN, atau Tanggal Lahir (DD/MM/YYYY)
+    </label>
     <input type="text" id="search" class="w-full p-2 border rounded-md mb-4" placeholder="Contoh: 13/08/2006 atau 3063153279 atau ABDUH HAFIZH">
     <button onclick="checkGraduation()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-md">Cek Kelulusan</button>
 
@@ -21,10 +24,10 @@
         <tbody id="result-body" class="divide-y divide-gray-200"></tbody>
       </table>
     </div>
-    <script src="data.js"></script>
     <p id="not-found" class="mt-6 text-red-600 font-semibold hidden">Data tidak ditemukan. Periksa kembali input Anda.</p>
   </div>
 
   <script src="script.js"></script>
 </body>
 </html>
+
