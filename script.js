@@ -1,29 +1,20 @@
-function checkGraduation() {
-  const input = document.getElementById('search').value.trim().toUpperCase();
-  const resultDiv = document.getElementById('result');
-  const notFoundMsg = document.getElementById('not-found');
-  const resultBody = document.getElementById('result-body');
-
-  resultBody.innerHTML = "";
-  resultDiv.classList.add('hidden');
-  notFoundMsg.classList.add('hidden');
-
-  const found = data.find(item =>
-    item.nama.toUpperCase() === input ||
-    item.nisn === input ||
-    item.dob === input
+function cariData() {
+  const input = document.getElementById("searchInput").value.trim();
+  const hasilDiv = document.getElementById("hasil");
+  const hasil = dataLulusan.find(siswa =>
+    siswa.nisn === input || siswa.tgl === input
   );
 
-  if (found) {
-    resultBody.innerHTML = `
-      <tr><td class="font-medium">Nama</td><td class="pl-2">${found.nama}</td></tr>
-      <tr><td class="font-medium">Tanggal Lahir</td><td class="pl-2">${found.tgl}</td></tr>
-      <tr><td class="font-medium">NISN</td><td class="pl-2">${found.nisn}</td></tr>
-      <tr><td class="font-medium">Nilai Akhir</td><td class="pl-2">${found.nilai}</td></tr>
-      <tr><td class="font-medium">Keterangan</td><td class="pl-2 font-bold text-green-600">${found.ket}</td></tr>
+  if (hasil) {
+    hasilDiv.innerHTML = `
+      <h3>Data Ditemukan:</h3>
+      <p><strong>Nama:</strong> ${hasil.nama}</p>
+      <p><strong>Tanggal Lahir:</strong> ${hasil.tgl}</p>
+      <p><strong>NISN:</strong> ${hasil.nisn}</p>
+      <p><strong>Nilai Akhir:</strong> ${hasil.nilai}</p>
+      <p><strong>Keterangan:</strong> ${hasil.ket}</p>
     `;
-    resultDiv.classList.remove('hidden');
   } else {
-    notFoundMsg.classList.remove('hidden');
+    hasilDiv.innerHTML = "<p>Data tidak ditemukan. Periksa kembali input Anda.</p>";
   }
 }
