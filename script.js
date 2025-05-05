@@ -17,10 +17,10 @@ function checkGraduation() {
   if (found) {
     resultBody.innerHTML = `
       <tr><td class="font-medium">Nama</td><td class="pl-2">${found.nama}</td></tr>
-      <tr><td class="font-medium">Tanggal Lahir</td><td class="pl-2">${found.dob}</td></tr>
+      <tr><td class="font-medium">Tanggal Lahir</td><td class="pl-2">${found.tgl}</td></tr>
       <tr><td class="font-medium">NISN</td><td class="pl-2">${found.nisn}</td></tr>
       <tr><td class="font-medium">Nilai Akhir</td><td class="pl-2">${found.nilai}</td></tr>
-      <tr><td class="font-medium">Keterangan</td><td class="pl-2 font-bold text-green-600">${found.status}</td></tr>
+      <tr><td class="font-medium">Keterangan</td><td class="pl-2 font-bold text-green-600">${found.ket}</td></tr>
     `;
     resultDiv.classList.remove('hidden');
   } else {
